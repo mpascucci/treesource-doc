@@ -19,6 +19,7 @@ execute the python module from the root folder `python -m treesource`
 │   │   ├── sub-sub2\
 │   │   │   └── file4  (this is file 4)
 │   │   └── file  (a documented file)
+│   ├── subfolder 2\  (a documented folder with no documented files)
 │   ├── a.txt  (a text file)
 │   └── file1.txt  (this is file 1)
 └── test.py  (a python script)
