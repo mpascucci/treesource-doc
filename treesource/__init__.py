@@ -1,0 +1,1 @@
+from .render import as_text
