@@ -82,7 +82,7 @@ def generate_tree(startpath):
     walked = []
 
     # iterate over the os.walk result
-    for root, dirs, files in os.walk(startpath):
+    for root, _, files in os.walk(startpath):
         # directory level
         level = root.replace(startpath, '').count(os.sep)
 
