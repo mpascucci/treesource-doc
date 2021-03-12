@@ -6,8 +6,13 @@ def get_doc_string(path, first_lines=30):
 
     docstring = None
 
+    
     try:
         f = open(path,'r')
+    except Exception:
+        return None
+
+    try:    
         for _ in range(first_lines):
             # read the file line by line and search the docstring
             line = f.readline()
@@ -17,7 +22,9 @@ def get_doc_string(path, first_lines=30):
                 break
     except UnicodeDecodeError:
         # probably a binary file
-        return None
+        docstring=None
+    except Exception:
+        docstring=None
     finally:
         f.close()
 
