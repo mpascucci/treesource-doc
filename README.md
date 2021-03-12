@@ -28,4 +28,4 @@ execute the python module from the root folder `python -m treesource`
 ### Output formats
 At the moment only txt and markdown are supported as output formats.
 
-The data is represented as [anytree][https://anytree.readthedocs.io/en/2.8.0/index.html], therefore implementing other renderings is relatively easy.
+The data is represented as [anytree](https://anytree.readthedocs.io/en/2.8.0/index.html), therefore implementing other renderings is relatively easy.
