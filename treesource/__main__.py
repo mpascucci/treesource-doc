@@ -1,8 +1,8 @@
 from __future__ import print_function
-from .scan import generate_tree
 from os import getcwd
-from . import render
 import argparse
+from treesource import generate_tree, render
+
 
 if __name__ == "__main__":
 

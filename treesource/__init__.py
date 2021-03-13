@@ -1,1 +1,2 @@
-from .render import as_text
+from .scan import generate_tree
+from . import render

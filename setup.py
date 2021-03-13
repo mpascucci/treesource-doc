@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(name='treesource',
-      version='0.0.1',
+      version='0.0.3',
       description=' commented source file-trees generator ',
       author='Marco Pascucci',
       long_description=long_description,
       long_description_content_type="text/markdown",
       author_email='marpas.paris@gmail.com',
       url='https://github.com/mpascucci/treesource-doc',
-      packages=['treesource'],
+      packages=['treesource', 'treesource.render'],
       install_requires=['anytree'],
       classifiers=[
         "Programming Language :: Python",

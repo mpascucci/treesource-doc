@@ -1,7 +1,7 @@
-from .engine import render_tree
+from . import engine
 
 
-def as_text(tree, use_unicode=True):
+def as_text(tree, use_unicode=False):
     """render the doctree as text"""
     # The rendering FORMATS
     # pre: the ASCII chars that represent the tree
@@ -28,7 +28,7 @@ def as_text(tree, use_unicode=True):
         folder_icon = ""
         file_icon = ""
 
-    rendered = render_tree(
+    rendered = engine.render_tree(
         tree,
         folder_icon, file_icon,
         doc_folder_format, no_doc_folder_format,
@@ -66,7 +66,7 @@ def as_markdown(tree, use_unicode=True):
         folder_icon = ""
         file_icon = ""
 
-    rendered = render_tree(
+    rendered = engine.render_tree(
         tree,
         folder_icon, file_icon,
         doc_folder_format, no_doc_folder_format,
