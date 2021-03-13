@@ -1,3 +1,0 @@
-# [treesource] this is file 1
-
-code line 1
