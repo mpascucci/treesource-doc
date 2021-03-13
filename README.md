@@ -27,6 +27,9 @@ $ python -m treesource -u
 └── 🗋 README.md (The main readme)
 ```
 
+## Install
+with pip `pip install treesource`.
+
 ## Usage
 Execute the python module from the root folder: `python -m treesource`
 ```
