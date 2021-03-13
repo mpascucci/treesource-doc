@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: treesource
+Version: 0.0.1
+Summary:  commented source file-trees generator 
+Home-page: https://github.com/mpascucci/treesource-doc
+Author: Marco Pascucci
+Author-email: marpas.paris@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
