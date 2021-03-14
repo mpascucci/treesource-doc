@@ -11,20 +11,20 @@ Files and folder which are not specifically described are omitted from the tree 
 
 ## Example
 ```
-$ python -m treesource -u
+$ python -m treesource
 .
-├── 🗀 example_folder\
-│   ├── 🗀 first_subfolder\ (a documented folder)
-│   │   ├── 🗀 sub-sub1\
-│   │   │   └── 🗋 file3.sh (this is file 3)
-│   │   ├── 🗀 sub-sub2\
-│   │   │   └── 🗋 file4.cpp (this is file 4)
-│   │   └── 🗋 random_file.rdm (a documented file)
-│   ├── 🗀 second_subfolder\ (a documented folder with no documented files)
-│   ├── 🗋 a_text_file.txt (a text file)
-│   ├── 🗋 my_javascript.js (this is file 1)
-│   └── 🗋 test.py (a python script)
-└── 🗋 README.md (The main readme)
+├── example_folder\
+│   ├── first_subfolder\ (a documented folder)
+│   │   ├── sub-sub1\
+│   │   │   └── file3.sh (this is file 3)
+│   │   ├── sub-sub2\
+│   │   │   └── file4.cpp (this is file 4)
+│   │   └── random_file.rdm (a documented file)
+│   ├── second_subfolder\ (a documented folder with no documented files)
+│   ├── a_text_file.txt (a text file)
+│   ├── my_javascript.js (this is file 1)
+│   └── test.py (a python script)
+└── README.md (The main readme)
 ```
 
 ## Install
