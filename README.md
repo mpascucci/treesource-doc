@@ -1,5 +1,5 @@
 ## Description
-Generate an up-to-date files-tree with short descriptions.
+Generate descriptive directory trees dynamically, ready for your project's REAMDE.
 
 The descriptions are specified in the same files with a specific tag tag:
 
