@@ -24,8 +24,6 @@ $ python -m treesource
 │   ├── a_text_file.txt (a text file)
 │   ├── my_javascript.js (this is file 1)
 │   └── test.py (a python script)
-├── treesource.egg-info/
-│   └── PKG-INFO (The main readme)
 └── README.md (The main readme)
 ```
 
