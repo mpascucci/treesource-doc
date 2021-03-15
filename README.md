@@ -5,7 +5,9 @@ The descriptions are specified in the same files as line comment with a tag:
 
 e.g. [treesource] The main readme
 
-Directories descriptions are specified in the respective `treesource.txt` file
+the tag must appear in the first 30 lines of the file, otherwise it is ignored.
+
+Directories descriptions are specified in a `treesource.txt` file contained in the respective folder.
 
 Files and folder which are not specifically described are omitted from the tree by default.
 
