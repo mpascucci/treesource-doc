@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(name='treesource',
-      version='0.0.3',
+      version='0.0.4',
       description=' commented source file-trees generator ',
       author='Marco Pascucci',
       long_description=long_description,
