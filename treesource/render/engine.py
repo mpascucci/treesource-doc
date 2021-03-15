@@ -1,11 +1,13 @@
-from anytree import RenderTree
-from .sorting import directory_first_alphabetical
+# -*- coding: UTF-8 -*-
 
+from anytree import RenderTree, AsciiStyle
+from .sorting import directory_first_alphabetical
+from sys import version_info
 
 def render_tree(
         tree, folder_icon, file_icon,
         doc_folder_format, no_doc_folder_format,
-        doc_file_format, no_doc_file_format):
+        doc_file_format, no_doc_file_format, pure_ASCII=False):
     """Render the doctree as text
 
     tree: the file-tree
@@ -29,10 +31,24 @@ def render_tree(
     #    no_doc_file_format = "{pre}{icon}{name}"
     """
 
-    rendered = ""
-
-    for pre, _, node in RenderTree(tree, childiter=directory_first_alphabetical):
+    if pure_ASCII:
+        file_icon = ''
+        folder_icon = ''
+        RenderTree_iter = RenderTree(tree,
+            childiter=directory_first_alphabetical,
+            style=AsciiStyle)
+    else:
+        RenderTree_iter = RenderTree(tree, childiter=directory_first_alphabetical)
+    
+    rendered=''
+    
+    for pre, _, node in RenderTree_iter:
         # directories
+
+        # specify utf-8 encoding for compatibility in python 2.7
+        if version_info[0] < 3:
+            pre = pre.encode('utf-8')
+
         if node.node_type == 'dir':
             if node.doc is None:  # no doc
                 rendered += no_doc_folder_format.format(

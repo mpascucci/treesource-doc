@@ -1,1 +1,1 @@
-from .formats import as_text, as_markdown
+from .formats import as_text, as_markdown, as_pure_ascii
