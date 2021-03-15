@@ -43,11 +43,13 @@ optional arguments:
   -a                    show all files and folder, not only documented ones
   -r PATH, --root PATH  the root directory of the tree
   -f FORMAT, --format FORMAT
-                        the rendering format [txt|md]
+                        the rendering format [txt|md|ascii]
 ```
 
 ## Output formats
 At the moment only txt and markdown are supported as output formats.
+
+If you experience encoding-related problems, use the  `-f ascii`.
 
 The data is represented as [anytree](https://anytree.readthedocs.io/en/2.8.0/index.html), therefore implementing other renderings is easy.
 

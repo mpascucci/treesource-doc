@@ -20,7 +20,7 @@ if __name__ == "__main__":
                         default=getcwd(), help='the root directory of the tree')
 
     parser.add_argument('-f', '--format', metavar='FORMAT', type=str,
-                        default='txt', help='the rendering format [txt|md]')
+                        default='txt', help='the rendering format [txt|md|ascii]')
     args = parser.parse_args()
 
     # generate the tree
@@ -28,11 +28,13 @@ if __name__ == "__main__":
 
     # render the tree
     if args.format.upper() in ['MD', 'MARKDOWN']:
-        rendered = render.as_markdown(tree, use_unicode=args.use_unicode)
-    elif args.format.upper() in ['TXT', 'TEXT', 'ASCII']:
-        rendered = render.as_text(tree, use_unicode=args.use_unicode)
+        rendered = render.as_markdown(tree, use_unicode_icons=args.use_unicode)
+    elif args.format.upper() in ['TXT', 'TEXT']:
+        rendered = render.as_text(tree, use_unicode_icons=args.use_unicode)
+    elif args.format.upper() in ['ASCII']:
+        rendered = render.as_pure_ascii(tree)
     else:
         print("ERROR: Unrecognised format option: {}".format(args.format))
-        rendered = render.as_text(tree, use_unicode=args.use_unicode)
+        rendered = render.as_text(tree, use_unicode_icons=args.use_unicode)
 
     print(rendered)
