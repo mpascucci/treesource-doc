@@ -1,5 +1,6 @@
-from . import engine
+# -*- coding: UTF-8 -*-
 
+from . import engine
 
 def as_text(tree, use_unicode=False):
     """render the doctree as text"""
