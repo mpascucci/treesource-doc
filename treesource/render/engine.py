@@ -53,8 +53,6 @@ def render_tree(
                     pre=pre, icon=file_icon, name=node.name, doc=node.doc
                 ) + "\n"
         else:
-            rendered += no_doc_file_format.format(
-                pre=pre, icon='', name=node.name, doc=''
-            ) + "\n"
+            rendered += "{pre}{name}".format(pre=pre, name=node.name) + "\n"
 
     return rendered

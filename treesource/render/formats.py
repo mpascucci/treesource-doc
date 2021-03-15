@@ -10,9 +10,9 @@ def as_text(tree, use_unicode=False):
     # doc: the documentation string
 
     # folder that has a documentation
-    doc_folder_format = "{pre}{icon}{name}\\ ({doc})"
+    doc_folder_format = "{pre}{icon}{name}/ ({doc})"
     # folder without documentation
-    no_doc_folder_format = "{pre}{icon}{name}\\"
+    no_doc_folder_format = "{pre}{icon}{name}/"
     # file that has a documentation
     doc_file_format = "{pre}{icon}{name} ({doc})"
     # file without documentation
