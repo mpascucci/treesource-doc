@@ -56,3 +56,37 @@ The data is represented as [anytree](https://anytree.readthedocs.io/en/2.8.0/ind
 Rendering formats are specified in `treesource/render/formats.py`
 1. Write a new rendering function starting from one of the existing
 2. update the command line argument parsing in __main__.py
+
+## Use in a python script
+This example shows the use of *treesource* in a python script, and the definition of a custom export format.
+
+```
+import treesource as ts
+
+# Generate the tree
+root_path='./example_folder'
+tree = ts.generate_tree(root_path)
+
+
+# === Render as pure text
+rendered = ts.render.as_text(tree, use_unicode=False)
+print(rendered)
+
+
+# === Render as specific format
+# The rendering FORMATS use special tokens which are replaced by the values:
+# pre: the ASCII chars that represent the tree
+# icon: an icon displayed is use_unicode is true
+# name: the file/directory name
+# doc: the documentation string
+
+rendered = ts.render.engine.render_tree(
+    tree,
+    folder_icon='D', file_icon='F',
+    doc_folder_format="{pre}[{icon}]/{name}/ --> {doc}",
+    no_doc_folder_format="{pre}[{icon}][{name}]",
+    doc_file_format="{pre}[{icon}][{name}] --> {doc}",
+    no_doc_file_format="{pre}[{icon}][{name}]")
+
+print(rendered)
+```
