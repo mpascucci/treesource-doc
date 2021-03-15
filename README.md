@@ -90,3 +90,31 @@ rendered = ts.render.engine.render_tree(
 
 print(rendered)
 ```
+
+The output is
+
+```
+.
+├── first_subfolder\ (a documented folder)
+│   ├── sub-sub1\
+│   │   └── file3.sh (this is file 3)
+│   ├── sub-sub2\
+│   │   └── file4.cpp (this is file 4)
+│   └── random_file.rdm (a documented file)
+├── second_subfolder\ (a documented folder with no documented files)
+├── a_text_file.txt (a text file)
+├── my_javascript.js (this is file 1)
+└── test.py (a python script)
+
+[][.]
+├── [D]/first_subfolder/ --> a documented folder
+│   ├── [D][sub-sub1]
+│   │   └── [F][file3.sh] --> this is file 3
+│   ├── [D][sub-sub2]
+│   │   └── [F][file4.cpp] --> this is file 4
+│   └── [F][random_file.rdm] --> a documented file
+├── [D]/second_subfolder/ --> a documented folder with no documented files
+├── [F][a_text_file.txt] --> a text file
+├── [F][my_javascript.js] --> this is file 1
+└── [F][test.py] --> a python script
+```
