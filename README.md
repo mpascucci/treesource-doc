@@ -106,7 +106,7 @@ The output is
 ├── my_javascript.js (this is file 1)
 └── test.py (a python script)
 
-[][.]
+.
 ├── [D]/first_subfolder/ --> a documented folder
 │   ├── [D][sub-sub1]
 │   │   └── [F][file3.sh] --> this is file 3
