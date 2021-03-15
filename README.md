@@ -1,7 +1,7 @@
 ## Description
 Generate descriptive directory trees dynamically, ready for your project's REAMDE.
 
-The descriptions are specified in the same files with a specific tag tag:
+The descriptions are specified in the same files as line comment with a tag:
 
 e.g. [treesource] The main readme
 
@@ -28,7 +28,7 @@ $ python -m treesource
 ```
 
 ## Install
-with pip `pip install treesource`.
+with pip: `pip install treesource`.
 
 ## Usage
 Execute the python module from the root folder: `python -m treesource`
@@ -49,7 +49,7 @@ optional arguments:
 ## Output formats
 At the moment only txt and markdown are supported as output formats.
 
-If you experience encoding-related problems, use the  `-f ascii`.
+If you experience encoding-related problems, use the  `-f ascii` option.
 
 The data is represented as [anytree](https://anytree.readthedocs.io/en/2.8.0/index.html), therefore implementing other renderings is easy.
 
