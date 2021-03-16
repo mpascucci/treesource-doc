@@ -1,5 +1,5 @@
 ## Description
-Generate descriptive directory trees dynamically, ready for your project's REAMDE.
+Generate descriptive directory trees dynamically, ready for your project's README.
 
 The descriptions are specified in the same files as line comment with a tag:
 
