@@ -9,7 +9,7 @@ the tag must appear in the first 30 lines of the file, otherwise it is ignored.
 
 Directories descriptions are specified in a `treesource.txt` file contained in the respective folder.
 
-Files and folder which are not specifically described are omitted from the tree by default.
+Files and folder which are not specifically described are omitted from the tree by default. This allows to **select and specify which files and folder wull appear in the directory tree, thereby hideing unnecessary items**.
 
 ## Example
 ```
