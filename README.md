@@ -64,7 +64,7 @@ Rendering formats are specified in `treesource/render/formats.py`
 ## Use in a python script
 This example shows the use of *treesource* in a python script, and the definition of a custom export format.
 
-```{pyhon}
+```python
 import treesource as ts
 
 # Generate the tree
