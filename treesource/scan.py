@@ -102,7 +102,7 @@ def generate_tree(startpath, keep_undocumented=False, input_encoding=None):
         documented_files = []
         for filename in files:
             # look for the docstring in the file
-            docstring = get_doc_string(os.path.join(root, filename))
+            docstring = get_doc_string(os.path.join(root, filename),input_encoding=input_encoding)
             # speed up by not inserting undocumented diles
             if keep_undocumented or (docstring is not None):
                 documented_files.append(dict(
