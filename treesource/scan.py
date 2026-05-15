@@ -3,13 +3,13 @@ import re
 from anytree import AnyNode, PostOrderIter
 
 
-def get_doc_string(path, first_lines=30):
+def get_doc_string(path, first_lines=30, input_encoding=None):
     """look for the doctree docstring in the first lines of the file in path"""
 
     docstring = None
 
     try:
-        f = open(path, 'r')
+        f = open(path, 'r', encoding=input_encoding)
     except Exception:
         return None
 
@@ -81,7 +81,7 @@ def walk2tree(walk_lsit, prune_undocumented):
     return root
 
 
-def generate_tree(startpath, keep_undocumented=False):
+def generate_tree(startpath, keep_undocumented=False, input_encoding=None):
     """Generate a file-tree object from the current working directory.
 
     keep_undocumented: keep undocumented files and directories in the tree
@@ -114,7 +114,7 @@ def generate_tree(startpath, keep_undocumented=False):
         dirdoc = None
         docfile = os.path.join(root, 'treesource.txt')
         if os.path.exists(docfile):
-            with open(docfile, 'r') as f:
+            with open(docfile, 'r', encoding=input_encoding) as f:
                 dirdoc = f.readline()
 
         walked.append(dict(

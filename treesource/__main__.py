@@ -21,10 +21,12 @@ if __name__ == "__main__":
 
     parser.add_argument('-f', '--format', metavar='FORMAT', type=str,
                         default='txt', help='the rendering format [txt|md|ascii]')
+    parser.add_argument('-i', '--input_encoding', type=str,
+                        default=None, help='the encoding assumed for the treesource.txt e.g. utf-8')
     args = parser.parse_args()
 
     # generate the tree
-    tree = generate_tree(args.root, keep_undocumented=args.show_all)
+    tree = generate_tree(args.root, keep_undocumented=args.show_all, input_encoding=args.input_encoding)
 
     # render the tree
     if args.format.upper() in ['MD', 'MARKDOWN']:
