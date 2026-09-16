@@ -35,7 +35,7 @@ with pip: `pip install treesource`.
 ## Usage
 Execute the python module from the root folder: `python -m treesource`
 ```
-usage: python -m treesource [-h] [-u] [-a] [-r PATH] [-f FORMAT]
+usage: python -m treesource [-h] [-u] [-a] [-r PATH] [-f FORMAT] [-i ENCODING]
 
 Source file-trees generator.
 
@@ -46,6 +46,8 @@ optional arguments:
   -r PATH, --root PATH  the root directory of the tree
   -f FORMAT, --format FORMAT
                         the rendering format [txt|md|ascii]
+  -i ENCODING, --input_encoding ENCODING
+                        the encoding that shall be assumed for the treesource.txt files
 ```
 
 ## Output formats
